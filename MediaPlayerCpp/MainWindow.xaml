@@ -1,0 +1,24 @@
+﻿<Window
+    x:Class="MediaPlayerCpp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MediaPlayerCpp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <SwapChainPanel x:Name="swapchain" Width="600" Height="400"/>
+        <StackPanel Orientation="Horizontal" x:Name="MTC" Grid.Row="1"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <Button x:Name="myButton" Click="myButton_Click"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <SymbolIcon Symbol="Play" x:Name="playPause"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
